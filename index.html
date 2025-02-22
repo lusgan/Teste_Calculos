@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Formulário</title>
     <!-- Link para o arquivo CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -34,8 +34,8 @@
 
             <fieldset>
                 <legend>Dimensão do Ambiente</legend>
-                <label for="largura">Área (m²):</label>
-                <input type="number" name="largura" id="largura" min="1" step="0.01" required>
+                <label for="area">Área (m²):</label>
+                <input type="number" name="area" id="area" min="1" step="0.01" required>
                 <label for="altura">Altura (m):</label>
                 <input type="number" name="altura" id="altura" min="1" step="0.01" required>
             </fieldset>
@@ -84,9 +84,12 @@
                     placeholder="Ex: Cortinas cobrindo as janelas, portas com vedação..."></textarea>
             </fieldset>
 
-            <button type="submit">Calcular Carga Térmica</button>
+            <button type="submit" id="botao_calcular_carga">Calcular Carga Térmica</button>
         </form>
     </div>
+
+    <script src="index.js"></script>
+
 </body>
 
 </html>
