@@ -1,3 +1,3 @@
-# Palestras
+#
 
-by lucas e kahliely
+by khalielly and lucas 
