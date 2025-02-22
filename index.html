@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário</title>
+</head>
+
+<body>
+    <h1>Cálculo de Carga Térmica</h1>
+
+    <form action="/app.js" method="post">
+
+
+        <fieldset>
+            <legend>Ar-Condicionado</legend>
+
+            <label for="tipo_arcondicionado">Marca do Ar-Condicionado:</label>
+            <select name="marca_ar" required>
+                <option value="lg">LG</option>
+                <option value="samsung">Samsung</option>
+                <option value="philco">Philco</option>
+                <option value="elgin">Elgin</option>
+                <option value="outra">Outra (Especificar abaixo)</option>
+            </select>
+            <input type="text" name="marca_personalizada" placeholder="Se escolheu 'Outra'">
+
+            <label>Quantidade de BTUs do Ar-Condicionado:</label>
+            <input type="number" name="btus_ar" id="btus_ar" min="0" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Dimensão do Ambiente</legend>
+
+            <label for="largura">Largura (metro):</label>
+            <input type="number" name="largura" id="largura" min="1" step="0.01" required><br><br>
+
+            <label for="comprimento">Comprimento (metro):</label>
+            <input type="number" name="comprimento" id="comprimento" min="1" step="0.01" required><br><br>
+
+            <label for="altura">Altura (metro):</label>
+            <input type="number" name="altura" id="altura" min="1" step="0.01" required>
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+            <legend>Portas e Janelas</legend>
+
+            <label for="quantidade_janelas">Quantidade de Janelas:</label>
+            <input type="number" id="quantidade_janelas" name="quantidade_janelas" min="0" required><br><br>
+
+            <label for="material_janelas">Material das Janelas:</label>
+            <select id="material_janelas" name="material_janelas" required>
+                <option value="blindex">Blindex</option>
+                <option value="ceramica">Cerâmica</option>
+                <option value="vidro_simples">Vidro Simples</option>
+                <option value="vidro_duplo">Vidro Duplo</option>
+                <option value="policarbonato">Policarbonato</option>
+            </select>><br><br>
+
+
+            <label>Orientação Solar:</label>
+            <select name="orientacao_janela" required>
+                <option value="norte">Norte</option>
+                <option value="sul">Sul</option>
+                <option value="leste">Leste</option>
+                <option value="oeste">Oeste</option>
+            </select><br><br>
+            <label>Há algo cobrindo a janela? (Cortina, película, etc.)</label>
+            <input type="text" name="cobertura_janela" id="cobertura_janela" rows="4" cols="50" placeholder="Opcional">
+
+
+            <label for="quantidade_portas">Quantidade de Portas:</label>
+            <input type="number" id="quantidade_portas" name="quantidade_portas" min="0" required><br><br>
+
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+            <legend>Ocupação</legend>
+            <label for="num_ocupantes">Número de Cadeiras:</label>
+            <input type="number" name="num_ocupantes" id="num_ocupantes" min="0" required><br><br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Eletrônicos</legend>
+            <label for="quantidade_eletronicos">Quantidade de Eletrônicos:</label>
+            <input type="number" id="quantidade_eletronicos" name="quantidade_eletronicos" min="0" required>
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+            <legend>Lâmpadas</legend>
+            <label for="quantidade_lampadas">Quantidade de Lâmpadas:</label>
+            <input type="number" id="quantidade_lampadas" name="quantidade_lampadas" min="0" required><br><br>
+
+            <label for="material_lampadas">Tipo de Lâmpadas:</label>
+            <select id="material_lampadas" name="material_lampadas" required>
+                <option value="incandescente">Incandescente</option>
+                <option value="fluorescente">Fluorescente</option>
+                <option value="led">LED</option>
+                <option value="halogena">Halógena</option>
+            </select>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Observações</legend>
+            <label for="observacoes">Informações adicionais:</label>
+            <textarea id="observacoes" name="observacoes" rows="4" cols="80"
+                placeholder="Ex: Cortinas cobrindo as janelas, portas com vedação..."></textarea>
+        </fieldset>
+        <br>
+
+        <button type="submit">Calcular Carga Térmica</button>
+
+    </form>
+</body>
+
+</html>
